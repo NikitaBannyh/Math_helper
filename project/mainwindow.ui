@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>413</width>
+    <height>244</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Главное меню</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background:Cornsilk;
+}
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>361</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Latha</family>
+     <pointsize>18</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:Navy;</string>
+   </property>
+   <property name="text">
+    <string>Математический помощник</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="calcul">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>90</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background:SteelBlue;
+color:white;
+}
+QPushButton:hover{
+background-color:rgb(52, 98, 135);
+}
+QPushButton:pressed{
+background-color:rgb(33, 61, 85);
+}</string>
+   </property>
+   <property name="text">
+    <string>Калькулятор</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="quatro">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>160</y>
+     <width>241</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background:FireBrick;
+color:white;
+}
+QPushButton:hover{
+background-color:rgb(143, 27, 27);
+}
+QPushButton:pressed{
+background-color:rgb(104, 19, 19);
+}</string>
+   </property>
+   <property name="text">
+    <string>Квадратные уравнения</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="graph">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>90</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background:Seagreen;
+color:white;
+}
+QPushButton:hover{
+background-color:rgb(29, 89, 55);
+}
+QPushButton:pressed{
+background-color:rgb(22, 67, 41);
+}</string>
+   </property>
+   <property name="text">
+    <string>Графики</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
