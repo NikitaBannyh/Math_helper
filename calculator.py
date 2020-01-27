@@ -1,6 +1,6 @@
 from math import sqrt, factorial
 from PyQt5 import uic
-from PyQt5.QtWidgets import QMessageBox, QWidget
+from PyQt5.QtWidgets import QMessageBox, QWidget, QPushButton
 
 
 class Calculator(QWidget):  # класс калькулятора
@@ -14,16 +14,16 @@ class Calculator(QWidget):  # класс калькулятора
         self.degree_ = []
         self.x = '0'
         self.lcdNumber.display(self.x)
-        self.one.clicked.connect(self._one)
-        self.two.clicked.connect(self._two)
-        self.three.clicked.connect(self._three)
-        self.four.clicked.connect(self._four)
-        self.five.clicked.connect(self._five)
-        self.six.clicked.connect(self._six)
-        self.seven.clicked.connect(self._seven)
-        self.eight.clicked.connect(self._eight)
-        self.nine.clicked.connect(self._nine)
-        self.zero.clicked.connect(self._zero)
+        self.one.clicked.connect(self.nums)
+        self.two.clicked.connect(self.nums)
+        self.three.clicked.connect(self.nums)
+        self.four.clicked.connect(self.nums)
+        self.five.clicked.connect(self.nums)
+        self.six.clicked.connect(self.nums)
+        self.seven.clicked.connect(self.nums)
+        self.eight.clicked.connect(self.nums)
+        self.nine.clicked.connect(self.nums)
+        self.zero.clicked.connect(self.nums)
         self.plus.clicked.connect(self._plus)
         self.equal.clicked.connect(self._equal)
         self.minus.clicked.connect(self._minus)
@@ -36,111 +36,13 @@ class Calculator(QWidget):  # класс калькулятора
         self.point.clicked.connect(self._point)
         self.show()
 
-    def _one(self):  # функции кнопок калькулятора отвечающие за числа
+    def nums(self):  # функция кнопок калькулятора отвечающие за числа
+        button = self.sender()
         if self.x == '0':
-            self.x = '1'
+            self.x = button.text()
             self.lcdNumber.display(self.x)
         else:
-            self.x += '1'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _two(self):
-        if self.x == '0':
-            self.x = '2'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '2'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _three(self):
-        if self.x == '0':
-            self.x = '3'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '3'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _four(self):
-        if self.x == '0':
-            self.x = '4'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '4'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _five(self):
-        if self.x == '0':
-            self.x = '5'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '5'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _six(self):
-        if self.x == '0':
-            self.x = '6'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '6'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _seven(self):
-        if self.x == '0':
-            self.x = '7'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '7'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _eight(self):
-        if self.x == '0':
-            self.x = '8'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '8'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _nine(self):
-        if self.x == '0':
-            self.x = '9'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '9'
-            if len(self.x) <= 9:
-                self.lcdNumber.display(self.x)
-            else:
-                pass
-
-    def _zero(self):
-        if self.x == '0':
-            self.x = '0'
-            self.lcdNumber.display(self.x)
-        else:
-            self.x += '0'
+            self.x += button.text()
             if len(self.x) <= 9:
                 self.lcdNumber.display(self.x)
             else:
