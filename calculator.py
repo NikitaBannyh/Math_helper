@@ -124,7 +124,7 @@ class Calculator(QWidget):  # класс калькулятора
             self.degree_.clear()
 
     def _plus(self):  # функция плюса
-        if '.' in self.x:
+        if '.' in str(self.x):
             self.plus_.append(float(self.x))
         else:
             self.plus_.append(int(self.x))
@@ -132,7 +132,7 @@ class Calculator(QWidget):  # класс калькулятора
         self.lcdNumber.display(int(self.x))
 
     def _minus(self):  # функция минуса
-        if '.' in self.x:
+        if '.' in str(self.x):
             self.minus_.append(float(self.x))
         else:
             self.minus_.append(int(self.x))
@@ -140,7 +140,7 @@ class Calculator(QWidget):  # класс калькулятора
         self.lcdNumber.display(int(self.x))
 
     def _division(self):  # функция деления
-        if '.' in self.x:
+        if '.' in str(self.x):
             self.division_.append(float(self.x))
         else:
             self.division_.append(int(self.x))
@@ -148,7 +148,7 @@ class Calculator(QWidget):  # класс калькулятора
         self.lcdNumber.display(int(self.x))
 
     def _umn(self):  # функция умножения
-        if '.' in self.x:
+        if '.' in str(self.x):
             self.umn_.append(float(self.x))
         else:
             self.umn_.append(int(self.x))
@@ -165,7 +165,7 @@ class Calculator(QWidget):  # класс калькулятора
         self.degree_.clear()
 
     def _degree(self):  # функция степени
-        if '.' in self.x:
+        if '.' in str(self.x):
             self.degree_.append(float(self.x))
         else:
             self.degree_.append(int(self.x))
